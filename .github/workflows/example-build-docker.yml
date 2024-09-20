@@ -38,7 +38,8 @@ jobs:
           ECR_URI: '697698820969.dkr.ecr.us-east-1.amazonaws.com/napis-express'
           IMAGE_TAG: hello6
         run: |
-          docker build -t hello5 .
+          docker build -t napis-express .
+          docker tag napis-express:hello6 697698820969.dkr.ecr.us-east-1.amazonaws.com/napis-express:hello6
           docker push 697698820969.dkr.ecr.us-east-1.amazonaws.com/napis-express:hello6
 
     # - name: Image digest
